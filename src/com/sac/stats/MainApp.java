@@ -8,6 +8,7 @@ import javax.xml.bind.JAXBContext;
 import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 
+import com.sac.stats.model.Player;
 import com.sac.stats.view.RootLayoutController;
 
 import javafx.application.Application;
@@ -25,7 +26,7 @@ public class MainApp extends Application {
 	private Stage primaryStage;
 	private BorderPane rootLayout;
 
-	//private ObservableList<Player> playerData = FXCollections.observableArrayList();
+	private ObservableList<Player> playerData = FXCollections.observableArrayList();
 	
 	@Override
 	public void start(Stage primaryStage) throws Exception {
@@ -33,11 +34,13 @@ public class MainApp extends Application {
 		this.primaryStage.setTitle("Smash Stats");
 		
 		 this.primaryStage.getIcons().add(new Image("file:res/images/smash_icon_32.png"));
+		 
+		 initRootLayout();
 	}
 	
-	/*public ObservableList<Player> getPersonData() {
+	public ObservableList<Player> getStatsData() {
         return playerData;
-    }*/
+    }
 	
 	 /**
      * Initializes the root layout and tries to load the last opened
