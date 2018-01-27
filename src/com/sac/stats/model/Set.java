@@ -1,3 +1,4 @@
+package com.sac.stats.model;
 public class Set {
 	
     public String name = "";

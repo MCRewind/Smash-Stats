@@ -1,3 +1,4 @@
+package com.sac.stats.model;
 import java.util.List;
 
 public class Player {
