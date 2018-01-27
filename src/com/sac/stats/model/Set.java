@@ -22,6 +22,12 @@ public class Set {
         double sigmoidFactor = 2/(5*(1+Math.pow(Math.E, p1.currentRank/2)));//might be better to do a cubic polynomial.
         p1.currentRank += sigmoidFactor * ((double) (p1Wins-p2Wins));
         p2.currentRank += sigmoidFactor * ((double) (p2Wins-p1Wins));
+        if (p1.currentRank < 0) {
+            p1.currentRank = 0;
+        }
+        if (p2.currentRank < 0) {
+            p2.currentRank = 0;
+        }
     }
 
     public Set(Player p1, Player p2, int p1Wins, int p2Wins, String n) {
@@ -35,5 +41,11 @@ public class Set {
         double sigmoidFactor = 2/(5*(1+Math.pow(Math.E, p1.currentRank/2)));//might be better to do a cubic polynomial.
         p1.currentRank += sigmoidFactor * ((double) (p1Wins-p2Wins));
         p2.currentRank += sigmoidFactor * ((double) (p2Wins-p1Wins));
+        if (p1.currentRank < 0) {
+            p1.currentRank = 0;
+        }
+        if (p2.currentRank < 0) {
+            p2.currentRank = 0;
+        }
     }
 }
