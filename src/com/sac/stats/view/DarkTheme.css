@@ -88,6 +88,34 @@
     -fx-background-color: black;
 }
 
+.tab-pane {
+    -fx-background-color: derive(#1d1d1d,80%);
+}
+
+.tab-header-background {
+	-fx-background-color: derive(#1d1d1d,10%);
+}
+
+.tab-content-area {
+	-fx-background-color: derive(#1d1d1d,20%);
+}
+
+.tab {
+	-fx-background-color: derive(#1d1d1d,90%);
+	-fx-font-size: 14pt;
+    -fx-font-family: "Segoe UI Light";
+    -fx-text-fill: white;
+    -fx-opacity: 0.6;
+}
+
+.tab:selected {
+	-fx-background-color: derive(#1d1d1d,90%);
+	-fx-font-size: 14pt;
+    -fx-font-family: "Segoe UI Light";
+    -fx-text-fill: white;
+    -fx-opacity: 0.3;
+}
+
 .text-field {
     -fx-font-size: 12pt;
     -fx-font-family: "Segoe UI Semibold";
